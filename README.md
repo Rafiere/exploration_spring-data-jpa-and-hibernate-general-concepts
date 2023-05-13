@@ -4,6 +4,3 @@ Esse é um projeto feito para explorar os principais conceitos relacionados ao S
 ao Hibernate.
 
 O domínio de uma loja de carros será modelado nesse projeto.
-
-# Aprendizados:
-
