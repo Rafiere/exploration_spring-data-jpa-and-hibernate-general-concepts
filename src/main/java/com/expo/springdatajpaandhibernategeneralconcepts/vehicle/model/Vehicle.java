@@ -1,4 +1,4 @@
-package com.expo.springdatajpaandhibernategeneralconcepts.car.model;
+package com.expo.springdatajpaandhibernategeneralconcepts.vehicle.model;
 
 import com.expo.springdatajpaandhibernategeneralconcepts.brand.domain.Brand;
 import jakarta.persistence.*;
