@@ -1,0 +1,34 @@
+<configuration>
+
+    <!-- Os "appenders" são as formas que os logs sairão. No exemplo abaixo, ele sairá pelo console. -->
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Os loggers são os responsáveis por capturar os logs de um pacote. Estamos definindo o appender que
+    será usado para cada tipo de log, e o nível que o log precisa ter para que ele seja capturado. -->
+
+
+    <!-- O pacote geral do Hibernate apenas obterá os logs do nível "INFO' para cima. -->
+    <logger name="org.hibernate" level="INFO">
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+
+    <!-- Esse pacote obterá os logs do nível "DEBUG" para cima. -->
+    <logger name="org.hibernate.sql" level="DEBUG">
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+
+    <!-- Esse pacote obterá os logs do nível "TRACE" para cima. Esses logs são os de binding, por exemplo. -->
+    <logger name="org.hibernate.type.descriptor.sql" level="TRACE">
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+
+    <!-- Esses são os logs gerais do Spring. -->
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+</configuration>
